@@ -1,6 +1,6 @@
 import React from "react";
 import "./ChecklistScreen.scss";
-import { ChecklistItem } from "./ChecklistItem";
+import { ChecklistItem } from "../ChecklistItem/ChecklistItem";
 
 export class ChecklistScreen extends React.Component {
   state = {};
