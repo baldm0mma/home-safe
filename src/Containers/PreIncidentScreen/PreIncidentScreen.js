@@ -3,8 +3,8 @@ import { connect } from "react-redux";
 import "./PreIncidentScreen.scss";
 import PreIncidentQuestionsBoolean from "../PreIncidentQuestions/PreIncidentQuestionsBoolean";
 // import PreIncidentQuestionsCheckbox from "../PreIncidentQuestions/PreIncidentQuestionsCheckbox";
-// import PreIncidentQuestionsNumber from "../PreIncidentQuestions/PreIncidentQuestionsNumber";
-// import PreIncidentQuestionsRadio from "../PreIncidentQuestions/PreIncidentQuestionsRadio";
+import PreIncidentQuestionsNumber from "../PreIncidentQuestions/PreIncidentQuestionsNumber";
+import PreIncidentQuestionsRadio from "../PreIncidentQuestions/PreIncidentQuestionsRadio";
 
 export class PreIncidentScreen extends React.Component {
   state = {
@@ -51,6 +51,7 @@ export class PreIncidentScreen extends React.Component {
             id={1}
             question="Do you have a gate or locked entrance to your residence?"
             advanceQuestion={this.advanceQuestion}
+            buttonText="Next"
           />
         )}
         {this.state.currentQuestion === 1 && (
@@ -59,6 +60,7 @@ export class PreIncidentScreen extends React.Component {
             id={2}
             question="Do you have a fire hydrant within one block, or 200ft of your residence?"
             advanceQuestion={this.advanceQuestion}
+            buttonText="Next"
           />
         )}
         {this.state.currentQuestion === 2 && (
@@ -67,38 +69,72 @@ export class PreIncidentScreen extends React.Component {
             id={3}
             question="Do you have a pond, creek, or river within 1/4 mile of your residence?"
             advanceQuestion={this.advanceQuestion}
+            buttonText="Next"
           />
         )}
-        {/* <PreIncidentQuestionsRadio
-          id={4}
-          question="What type of roof do you have?"
-        />
-        <PreIncidentQuestionsRadio id={5} question="Do you have a basement?" />
-        <PreIncidentQuestionsNumber
-          id={6}
-          question="How many direct exits (doors) do you have in your residence?"
-        />
-        <PreIncidentQuestionsBoolean
-          id={7}
-          question="Do you have access to your attic from the interior of your residence?"
-        />
-        <PreIncidentQuestionsBoolean
-          id={8}
-          question="Do you have a fire alarm system?"
-        />
-        <PreIncidentQuestionsCheckbox
+        {this.state.currentQuestion === 3 && (
+          <PreIncidentQuestionsRadio
+            id={4}
+            question="What type of roof do you have?"
+            options={["Flat", "Arhced", "Pitched", "Hip", "Dome", "Other"]}
+            advanceQuestion={this.advanceQuestion}
+            buttonText="Next"
+          />
+        )}
+        {this.state.currentQuestion === 4 && (
+          <PreIncidentQuestionsRadio
+            id={5}
+            question="What type of basement do you have?"
+            options={["None", "Daylight Basement", "Walkout Basement"]}
+            advanceQuestion={this.advanceQuestion}
+            buttonText="Next"
+          />
+        )}
+        {this.state.currentQuestion === 5 && (
+          <PreIncidentQuestionsNumber
+            id={6}
+            question="How many direct exits (doors) do you have in your residence?"
+            advanceQuestion={this.advanceQuestion}
+            buttonText="Next"
+          />
+        )}
+        {this.state.currentQuestion === 6 && (
+          <PreIncidentQuestionsBoolean
+            id={7}
+            question="Do you have access to your attic from the interior of your residence?"
+            advanceQuestion={this.advanceQuestion}
+            buttonText="Next"
+          />
+        )}
+        {this.state.currentQuestion === 7 && (
+          <PreIncidentQuestionsBoolean
+            id={8}
+            question="Do you have a fire alarm system?"
+            advanceQuestion={this.advanceQuestion}
+            buttonText="Next"
+          />
+        )}
+        {/* <PreIncidentQuestionsCheckbox
           id={9}
           question="Do you have a fire suppression system?"
-        />
-        <PreIncidentQuestionsNumber
-          id={10}
-          question="How many smoke detectors are in your residence?"
-        />
-        <PreIncidentQuestionsBoolean
-          id={11}
-          question="Do you have a carbon monoxide detector in your residence?"
-        />
-        <PreIncidentQuestionsCheckbox
+        /> */}
+        {this.state.currentQuestion === 9 && (
+          <PreIncidentQuestionsNumber
+            id={10}
+            question="How many smoke detectors are in your residence?"
+            advanceQuestion={this.advanceQuestion}
+            buttonText="Next"
+          />
+        )}
+        {this.state.currentQuestion === 10 && (
+          <PreIncidentQuestionsBoolean
+            id={11}
+            question="Do you have a carbon monoxide detector in your residence?"
+            advanceQuestion={this.advanceQuestion}
+            buttonText="Next"
+          />
+        )}
+        {/* <PreIncidentQuestionsCheckbox
           id={12}
           question="Are you storing any hazardous materials? If so, where?"
         /> */}
