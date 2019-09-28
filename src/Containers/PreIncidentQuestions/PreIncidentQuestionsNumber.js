@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { logAnswer } from "../../Actions/index";
+import "./PreIncidentQuestions.scss";
 
 export class PreIncidentQuestionsNumber extends Component {
   state = {

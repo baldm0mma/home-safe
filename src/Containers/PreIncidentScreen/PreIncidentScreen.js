@@ -44,7 +44,7 @@ export class PreIncidentScreen extends React.Component {
 
   render() {
     return (
-      <main className="pre-incident-screen">
+      <main>
         {this.state.currentQuestion === 0 && (
           <PreIncidentQuestionsBoolean
             key={1}
