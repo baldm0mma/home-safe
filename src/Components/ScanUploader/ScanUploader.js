@@ -2,20 +2,24 @@ import React, { Component } from 'react';
 
 class ScanUploader extends Component {
   state = {
-    Upload: ''
+    houseScan: ''
+  }
+
+  handleChange = (e) => {
+    this.setState({ [e.target.name]: e.target.value });
   }
 
   render() {
     return (
       <form>
-        <label for="house-scan">Upload 3-D Scan of House</label>
+        <label htmlFor="house-scan">Upload 3-D Scan of House</label>
         <input 
           id="house-scan"
-          class="upload-button"
-          name="house-scan"
+          className="upload-button"
+          name="houseScan"
           type="file"
           accept=".xyz"
-        />
+        />  
       </form>
     )
   }
