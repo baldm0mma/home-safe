@@ -10,9 +10,11 @@ export const App = () => {
   return (
     <main>
       <Header></Header>
-      <Route exact path="/" component={LoginScreen}></Route>
-      <Route exact path="/checklist" component={ChecklistScreen}></Route>
-      <Route exact path="/plan" component={PreIncidentScreen}></Route>
+      <section class="page-content">
+        <Route exact path="/" component={LoginScreen}></Route>
+        <Route exact path="/checklist" component={ChecklistScreen}></Route>
+        <Route exact path="/plan" component={PreIncidentScreen}></Route>
+      </section>
     </main>
   );
 };
