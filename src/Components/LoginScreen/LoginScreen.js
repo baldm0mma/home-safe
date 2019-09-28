@@ -16,7 +16,9 @@ export class LoginScreen extends Component {
       <div>
         <Login></Login>
         <nav>
-          <button onClick={() => this.toggleUser('homeowner')}>Homeowner</button>
+          <button onClick={() => this.toggleUser('homeowner')}>
+            Homeowner
+          </button>
           <button onClick={() => this.toggleUser('firstResponder')}>
             First Responder
           </button>
