@@ -1,5 +1,13 @@
 import React from "react";
 import "./ChecklistItem.scss";
+import { connect } from "react-redux";
+import { bindActionCreators } from "redux";
+import {
+  addProgress,
+  subtractProgress,
+  checkItem,
+  unCheckItem
+} from "../../Actions";
 
 export class ChecklistItem extends React.Component {
   state = {
@@ -7,12 +15,19 @@ export class ChecklistItem extends React.Component {
   };
 
   componentDidMount() {
-    this.setState({ checked: this.props.checked })
+    this.setState({ checked: this.props.checked });
   }
 
-  toggleChecked = () => {
-    this.setState({ checked: !this.state.checked })
-  }
+  toggleChecked = async () => {
+    await this.setState({ checked: !this.state.checked });
+    if (this.state.checked) {
+      this.props.checkItem(this.props.id);
+      this.props.addProgress(5);
+    } else {
+      this.props.unCheckItem(this.props.id);
+      this.props.subtractProgress(5);
+    }
+  };
 
   render() {
     return (
@@ -36,3 +51,14 @@ export class ChecklistItem extends React.Component {
     );
   }
 }
+
+export const mapDispatchToProps = dispatch =>
+  bindActionCreators(
+    { addProgress, subtractProgress, checkItem, unCheckItem },
+    dispatch
+  );
+
+export default connect(
+  null,
+  mapDispatchToProps
+)(ChecklistItem);

@@ -1,8 +1,12 @@
 import { combineReducers } from 'redux';
-import { updateProgressReducer } from './updateProgressReducer';
+import { progressReducer } from './progressReducer';
+import { checklistReducer } from "./checklistReducer";
+import { preIncidentReducer } from "./preIncidentReducer";
 
 const rootReducer = combineReducers({
-  updateProgress: updateProgressReducer
+  progress: progressReducer,
+  checklist: checklistReducer,
+  preIncidentQuestions: preIncidentReducer
 });
 
 export default rootReducer;
