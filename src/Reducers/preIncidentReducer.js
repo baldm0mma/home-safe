@@ -1,36 +1,22 @@
 export const defaultQuestions = [
   {
     id: 1,
-    question: 'Do you have a gate or locked entrance to your residence?',
-    type: 'boolean',
     answer: false
   },
   {
     id: 2,
-    question:
-      'Do you have a fire hydrant within one block, or 200ft of your residence?',
-    type: 'boolean',
     answer: false
   },
   {
     id: 3,
-    question:
-      'Do you have a pond, creek, or river within 1/4 mile of your residence?',
-    type: 'boolean',
     answer: false
   },
   {
     id: 4,
-    question: 'What type of roof do you have?',
-    type: 'radio',
-    options: ['Flat', 'Arhced', 'Pitched', 'Hip', 'Dome', 'Other'],
     answer: ''
   },
   {
     id: 5,
-    question: 'Do you have a basement?',
-    type: 'radio',
-    options: ['No', 'Daylight Basement', 'Walkout Basement'],
     answer: ''
   },
   {
