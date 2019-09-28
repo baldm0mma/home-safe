@@ -75,6 +75,14 @@ export const defaultQuestions = [
 
 export const preIncidentReducer = (state = defaultQuestions, action) => {
   switch (action.type) {
+    case "LOG_ANSWER":
+      return state.map(question => {
+        if (question.id === action.id) {
+          return { ...question, answer };
+        } else {
+          return question;
+        }
+      });
     default:
       return state;
   }
