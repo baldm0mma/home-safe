@@ -27,7 +27,7 @@ export const defaultQuestions = [
   },
   {
     id: 5,
-    question: "Do you have a basement?",
+    question: "What type of basement do you have?",
     type: "radio",
     answer: ""
   },

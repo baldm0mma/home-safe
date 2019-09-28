@@ -4,7 +4,7 @@ import "./PreIncidentScreen.scss";
 import PreIncidentQuestionsBoolean from "../PreIncidentQuestions/PreIncidentQuestionsBoolean";
 // import PreIncidentQuestionsCheckbox from "../PreIncidentQuestions/PreIncidentQuestionsCheckbox";
 import PreIncidentQuestionsNumber from "../PreIncidentQuestions/PreIncidentQuestionsNumber";
-// import PreIncidentQuestionsRadio from "../PreIncidentQuestions/PreIncidentQuestionsRadio";
+import PreIncidentQuestionsRadio from "../PreIncidentQuestions/PreIncidentQuestionsRadio";
 
 export class PreIncidentScreen extends React.Component {
   state = {
@@ -72,11 +72,24 @@ export class PreIncidentScreen extends React.Component {
             buttonText="Next"
           />
         )}
-        {/* <PreIncidentQuestionsRadio
-          id={4}
-          question="What type of roof do you have?"
-        /> */}
-        {/* <PreIncidentQuestionsRadio id={5} question="Do you have a basement?" /> */}
+        {this.state.currentQuestion === 3 && (
+          <PreIncidentQuestionsRadio
+            id={4}
+            question="What type of roof do you have?"
+            options={["Flat", "Arhced", "Pitched", "Hip", "Dome", "Other"]}
+            advanceQuestion={this.advanceQuestion}
+            buttonText="Next"
+          />
+        )}
+        {this.state.currentQuestion === 4 && (
+          <PreIncidentQuestionsRadio
+            id={5}
+            question="What type of basement do you have?"
+            options={["None", "Daylight Basement", "Walkout Basement"]}
+            advanceQuestion={this.advanceQuestion}
+            buttonText="Next"
+          />
+        )}
         {this.state.currentQuestion === 5 && (
           <PreIncidentQuestionsNumber
             id={6}
