@@ -1,12 +1,13 @@
 import React from 'react';
+import { Route } from 'react-router-dom';
+import {Header} from './Header';
 import './App.css';
 
-function App() {
+export const App = () => {
   return (
-    <div className="App">
-      hi
-    </div>
+    <main>
+      <Header></Header>
+      <Route exact path='/' component={LoginScreen}></Route>
+    </main>
   );
 }
-
-export default App;
