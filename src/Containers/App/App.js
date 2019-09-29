@@ -5,11 +5,11 @@ import { LoginScreen } from '../../Components/LoginScreen/LoginScreen';
 import ChecklistScreen from '../ChecklistScreen/ChecklistScreen';
 import PreIncidentScreen from '../PreIncidentScreen/PreIncidentScreen';
 import { Summary } from '../../Components/Summary/Summary';
-import './App.css';
+import './App.scss';
 
 export const App = () => {
   return (
-    <main>
+    <main className="app-main">
       <Header></Header>
       <Route exact path="/" component={LoginScreen}></Route>
       <Route exact path="/checklist" component={ChecklistScreen}></Route>

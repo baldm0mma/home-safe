@@ -6,7 +6,10 @@ export const Header = () => {
   return (
     <header>
       <h1>Home Safe</h1>
-      <Gauge />
+      <div className="header-gauge-wrapper">
+        <p className="progress-text">Safety Progress</p>
+        <Gauge />
+      </div>
     </header>
-  )
+  );
 }
