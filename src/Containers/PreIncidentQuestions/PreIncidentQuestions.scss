@@ -1,0 +1,82 @@
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.question-wrapper {
+  margin-top: 20vh;
+  height: 55vh;
+  width: 90vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  animation: fadeIn .6s linear;
+  border-radius: 8px;
+  box-shadow: 10px 10px 40px -28px rgba(0,0,0,0.75);
+  background: white;
+}
+
+p {
+  font-size: 2.2rem;
+  font-weight: 400;
+}
+
+button {
+  height: 10vh;
+  width: 25vw;
+  font-size: 1.5rem;
+  font-weight: 500;
+  background: white;
+  border: 2px solid black;
+  border-radius: 4px;
+  margin: 0px 10px;
+  &:hover {
+    cursor: pointer;
+    opacity: 1;
+  }
+}
+
+.yes-button {
+  outline-color: #2CCC71;
+  opacity: .8;
+  box-shadow: 10px 10px 40px -28px rgba(0,0,0,0.75);
+  &:hover {
+    border-color: #2CCC71;
+    background: #2CCC71;
+  }
+}
+
+.no-button {
+  outline-color: #cc3c2c;
+  opacity: .8;
+  box-shadow: 10px 10px 40px -28px rgba(0,0,0,0.75);
+  &:hover {
+    border-color: #cc3c2c;
+    background: #cc3c2c;
+  }
+}
+
+.red {
+  background: #cc3c2c;
+  border-color: #cc3c2c;
+}
+
+.green {
+  background: #2CCC71;
+  border-color: #2CCC71;
+}
+
+.next-button {
+  background: #2781be;
+  border: none;
+  color: white;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  opacity: .8;
+  box-shadow: 10px 10px 40px -28px rgba(0,0,0,0.75);
+}

@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { logAnswer } from "../../Actions/index";
+import "./PreIncidentQuestions.scss";
 
 export class PreIncidentQuestionsNumber extends Component {
   state = {
@@ -21,8 +22,14 @@ export class PreIncidentQuestionsNumber extends Component {
     return (
       <article>
         <p>{this.props.question}</p>
-        <input type="text" value={this.state.answer} onChange={this.handleChange} />
-        <button onClick={this.handleSubmit}>{this.props.buttonText}</button>
+        <input
+          type="text"
+          value={this.state.answer}
+          onChange={this.handleChange}
+        />
+        <button className="next-button" onClick={this.handleSubmit}>
+          {this.props.buttonText}
+        </button>
       </article>
     );
   };
