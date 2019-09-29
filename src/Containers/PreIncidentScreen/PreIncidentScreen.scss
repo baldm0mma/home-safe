@@ -4,26 +4,24 @@ main {
   align-items: center;
   justify-content: space-between;
   height: 100vh;
-  background: rgb(241, 241, 241);
-  background-image: url("../../assets/yard-home.jpg");
-  background-position: center;
 }
 
 .dots-wrapper {
   display: flex;
   align-items: center;
   height: 10vh;
-  margin-bottom: 10vh;
+  margin-bottom: 5vh;
+  margin-top: 3vh;
 }
 
 .active-dot {
   height: 40px;
   margin: 10px;
-  opacity: .6;
+  opacity: .7;
 }
 
 .dot {
   height: 15px;
   margin: 10px;
-  opacity: .6;
+  opacity: .7;
 }

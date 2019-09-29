@@ -6,17 +6,19 @@ import ChecklistScreen from '../ChecklistScreen/ChecklistScreen';
 import PreIncidentScreen from '../PreIncidentScreen/PreIncidentScreen';
 import { Summary } from '../../Components/Summary/Summary';
 import FirstResponderPlan from '../FirstResponderPlan/FirstResponderPlan';
-import './App.css';
+import ScanPage from '../../Components/ScanPage/ScanPage';
+import './App.scss';
 
 export const App = () => {
   return (
-    <main>
+    <main className="app-main">
       <Header></Header>
       <Route exact path="/" component={LoginScreen}></Route>
       <Route exact path="/checklist" component={ChecklistScreen}></Route>
       <Route exact path="/plan" component={PreIncidentScreen}></Route>
       <Route exact path="/summary" component={Summary}></Route>
       <Route exact path="/responderPlan" component={FirstResponderPlan}></Route>
+      <Route exact path="/scan-upload" component={ScanPage}></Route>
     </main>
   );
 };
