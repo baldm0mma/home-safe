@@ -38,6 +38,11 @@ export class Summary extends Component {
     return Math.floor((counter / preIncidentQuestions.length) * 100);
   };
 
+  verifyUpload = () => {
+    const { uploadCounter } = this.props;
+    return uploadCounter > 0 ? 100 : 0;
+  };
+
   render() {
     return (
       <div className="summary-board">
