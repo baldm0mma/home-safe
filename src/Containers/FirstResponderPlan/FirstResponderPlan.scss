@@ -1,0 +1,51 @@
+.plan-container {
+  border-radius: 8px;
+  box-shadow: 10px 10px 40px -28px rgba(0,0,0,0.75);
+  background: rgba(255, 255, 255, 0.719);
+  margin-top: 23vh;
+  height: 70vh;
+  width: 90vw;
+  overflow-y: scroll;
+}
+
+.plan-title {
+  text-align: center;
+  margin: 0;
+  margin-top: 20px;
+}
+
+.resident-container {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+.people-pets {
+  display: flex;
+  align-content: space-between;
+  width: 100%;
+  justify-content: space-evenly;
+}
+
+.floorPlan-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.details-container {
+  display: flex;
+  justify-content: center;
+}
+
+.areaDetails-container {
+  text-align: center;
+}
+
+.buildingDetails-container {
+  text-align: center;
+}

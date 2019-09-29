@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { logAnswer } from '../../Actions/index';
 import { Checkbox, FormControlLabel } from '@material-ui/core';
+import { Link } from 'react-router-dom';
 
 export class PreIncidentQuestionsCheckbox extends Component {
   state = {
@@ -48,7 +49,18 @@ export class PreIncidentQuestionsCheckbox extends Component {
       <article key={id}>
         <p>{question}</p>
         {this.createCheckboxes()}
-        <button onClick={this.handleSubmit}>{buttonText}</button>
+        {buttonText !== 'Finish' && (
+          <button onClick={this.handleSubmit}>{buttonText}</button>
+        )}
+        {buttonText === 'Finish' && (
+          <Link
+            className='next-button'
+            to='/responderPlan'
+            onClick={this.handleSubmit}
+          >
+            {buttonText}
+          </Link>
+        )}
       </article>
     );
   };
