@@ -13,7 +13,7 @@ export const Gauge = props => {
         styles={buildStyles({
           pathColor: "#2781be",
           textColor: "#2781be",
-          trailColor: "white"
+          trailColor: "whiteg"
         })}
       />
     </div>
