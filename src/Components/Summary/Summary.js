@@ -1,10 +1,30 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import { SummaryBranch } from '../../Containers/SummaryBranch/SummaryBranch';
 import './Summary.scss';
 
 export class Summary extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
+  }
+
+  componentDidMount = () => {
+    console.log(this.props);
+  };
+
+  calculateChecklistProgress = () => {
+    const { checklist } = this.props;
+    let counter = 0;
+    checklist.forEach(item => {
+      if (item.checked) {
+        counter++;
+      } else {
+        counter += 0;
+      }
+    });
+    return Math.floor((counter / checklist.length) * 100);
+  };
+
   }
 
   render() {
