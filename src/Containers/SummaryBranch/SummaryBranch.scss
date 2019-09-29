@@ -3,20 +3,23 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
-  height: 250px;
+  height: 24vh;
   width: 95%;
-  padding: 10px;
   margin: 0;
-  border: 1px solid green;
 }
 
 .branch-icon {
-  height: 100px;
-  width: 100px;
-  background-color: magenta;
+  height: 64px;
 }
 
 .branch-description {
-  font-size: 16px;
+  font-size: 1.2rem;
   width: 50%;
+  margin: 0;
+}
+
+.branch-coverage {
+  font-weight: 700;
+  font-size: 2.5rem;
+  color: #ff8a23;
 }

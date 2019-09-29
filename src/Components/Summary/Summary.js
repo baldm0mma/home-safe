@@ -10,7 +10,7 @@ export class Summary extends Component {
   render() {
     return (
       <div className="summary-board">
-        <h1>Summary</h1>
+        {/* <h2>Summary</h2> */}
         <SummaryBranch category="checklist" />
         <SummaryBranch category="preIncident" />
         <SummaryBranch category="floorPlan" />
