@@ -19,10 +19,10 @@ export const FirstResponderPlan = ({ details }) => {
     for (let i = 0; i < 3; i++) {
       result.push(
         <li>
-          <p>{details[i].question}</p>
-          {details[i].answer.toString() && <p>{details[i].answer}</p>}
-          {details[i].answer === true && <p>Yes</p>}
-          {details[i].answer === false && <p>No</p>}
+          <p className="plan-answers-question">{details[i].question}</p>
+          {details[i].answer.toString() && <p className="plan-answers-number">{details[i].answer}</p>}
+          {details[i].answer === true && <p className="plan-answers-positive">Yes</p>}
+          {details[i].answer === false && <p className="plan-answers-negative">No</p>}
         </li>
       );
     }
@@ -33,10 +33,19 @@ export const FirstResponderPlan = ({ details }) => {
     for (let i = 3; i < 12; i++) {
       result.push(
         <li>
-          <p>{details[i].question}</p>
-          {details[i].answer.toString() && <p>{details[i].answer}</p>}
-          {details[i].answer === true && <p>Yes</p>}
-          {details[i].answer === false && <p>No</p>}
+          <p className="plan-answers-question">{details[i].question}</p>
+          {typeof details[i].answer === "string" && (
+            <p className="plan-answers-number">{details[i].answer}</p>
+          )}
+          {details[i].answer === true && (
+            <p className="plan-answers-positive">Yes</p>
+          )}
+          {details[i].answer === false && (
+            <p className="plan-answers-negative">No</p>
+          )}
+          {typeof details[i].answer === "object" && (
+            <p className="plan-answers-positive">{details[i].answer.join(", ")}</p>
+          )}
         </li>
       );
     }
