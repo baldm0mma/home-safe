@@ -1,9 +1,14 @@
 .checklist-screen {
-  margin-top: 20vh;
+  margin-top: 23vh;
   overflow-y: scroll;
+  overflow-x: hidden;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  width: 90%;
+  height: 70vh;
+  border-radius: 8px;
+  box-shadow: 10px 10px 40px -28px rgba(0, 0, 0, 0.815);
 }
 
 .checklist-wrapper {
@@ -11,5 +16,6 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  
+  background: rgba(255, 255, 255, 0.719);
+  padding: 15px;
 }
