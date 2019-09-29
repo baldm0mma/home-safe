@@ -45,10 +45,12 @@ export class PreIncidentQuestionsCheckbox extends Component {
   render = () => {
     const { id, question, buttonText } = this.props;
     return (
-      <article key={id}>
+      <article key={id} className="question-wrapper">
         <p>{question}</p>
-        {this.createCheckboxes()}
-        <button onClick={this.handleSubmit}>{buttonText}</button>
+        <div className="checkboxes-wrapper">{this.createCheckboxes()}</div>
+        <button className="next-button" onClick={this.handleSubmit}>
+          {buttonText}
+        </button>
       </article>
     );
   };
