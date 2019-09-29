@@ -16,11 +16,13 @@ class ScanUploader extends Component {
 
   render() {
     let buttonDisabled;
+    
     if (this.state.houseScan === '') {
       buttonDisabled = true;
     } else {
       buttonDisabled = false;
     }
+
     return (
       <form className="scan-form">
         <label className="house-scan-label" htmlFor="house-scan">Upload 3-D Scan of House</label>

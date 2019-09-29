@@ -43,3 +43,10 @@
   font-size: 1em;
   margin: 0px 5px;
 }
+
+.scan-submit-button:disabled,
+.scan-submit-button:disabled:hover {
+  background-color: lightgrey;
+  border: none;
+  color: white;
+}
