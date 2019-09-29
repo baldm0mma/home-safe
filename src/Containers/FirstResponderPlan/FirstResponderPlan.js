@@ -43,33 +43,35 @@ export const FirstResponderPlan = ({ details }) => {
     return result;
   };
   return (
-    <section className='plan-container'>
-      <h1 className='plan-title'>
+    <section className="plan-container">
+      <h1 className="plan-title">
         <span>Home Safe's </span>First Responder Action Plan
       </h1>
-      <div className='resident-container'>
+      <div className="resident-container">
         <h3>Resident Details</h3>
-        <div className='people-pets'>
-          <div className='people'>
+        <div className="people-pets">
+          <div className="people">
             <h5>People</h5>
             <ul>{displayPeople()}</ul>
           </div>
-          <div className='pets'>
+          <div className="pets">
             <h5>Pets</h5>
             <ul>{displayPets()}</ul>
           </div>
         </div>
       </div>
-      <div className='floorPlan-container'>
+      <div className="floorPlan-container">
         <h3>Floor Plans</h3>
-        <article className='floorPlans'>// floor plans</article>
+        <article className="floorPlans">
+          <img src={require('../../assets/FloorPlanLayout.png')} />
+        </article>
       </div>
-      <div className='details-container'>
-        <div className='buildingDetails-container'>
+      <div className="details-container">
+        <div className="buildingDetails-container">
           <h3>Building Details</h3>
           <ul>{displayBuildingDetails()}</ul>
         </div>
-        <div className='areaDetails-container'>
+        <div className="areaDetails-container">
           <h3>Area Details</h3>
           <ul>{displayAreaDetails()}</ul>
         </div>
