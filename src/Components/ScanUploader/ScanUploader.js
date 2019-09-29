@@ -2,23 +2,27 @@ import React, { Component } from 'react';
 import './ScanUploader.scss'
 
 class ScanUploader extends Component {
-  state = {
-    houseScan: '',
-    submitted: false
+  
+  constructor(props) {
+    super(props);
+    this.state = {
+      houseScan: '',
+    }
   }
 
   handleChange = (e) => {
     this.setState({ [e.target.name]: e.target.value });
   }
 
-  handleSubmit = (e) => {
-    e.preventDefault();
-    this.setState({ submitted: true });
-  }
-
   render() {
+    let buttonDisabled;
+    if (this.state.houseScan === '') {
+      buttonDisabled = true;
+    } else {
+      buttonDisabled = false;
+    }
     return (
-      <form className="scan-form" onSubmit={(e) => this.handleSubmit(e)}>
+      <form className="scan-form">
         <label className="house-scan-label" htmlFor="house-scan">Upload 3-D Scan of House</label>
         <input 
           id="house-scan"
@@ -39,7 +43,11 @@ class ScanUploader extends Component {
             <p className="selected-file">No File Selected</p>
           </div>
         }
-        <button className="scan-submit-button">Submit Scan</button>
+        <button 
+          className="scan-submit-button" 
+          onClick={(e) => this.props.handleSubmit(e)} 
+          disabled={buttonDisabled}
+        >Submit Scan</button>
       </form>
     )
   }
