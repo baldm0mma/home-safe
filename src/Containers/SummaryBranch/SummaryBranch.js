@@ -9,7 +9,7 @@ export const SummaryBranch = props => {
         <div className="summary-branch">
           <img
             className="branch-icon"
-            src={require('../../assets/_checklistIcon.png')}
+            src='./checklist.png'
           />
           <p className="branch-description">{checklistText}</p>
           <p className="branch-coverage">0%</p>
@@ -20,7 +20,7 @@ export const SummaryBranch = props => {
         <div className="summary-branch">
           <img
             className="branch-icon"
-            src={require('../../assets/_preIncident.png')}
+            src='./planning.png'
           />
           <p className="branch-description">{preIncidentText}</p>
           <p className="branch-coverage">0%</p>
@@ -31,7 +31,7 @@ export const SummaryBranch = props => {
         <div className="summary-branch">
           <img
             className="branch-icon"
-            src={require('../../assets/_floorplanIcon.jpg')}
+            src='./floor-plan.png'
           />
           <p className="branch-description">{uploadScanText}</p>
           <p className="branch-coverage">0%</p>
