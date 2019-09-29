@@ -7,34 +7,25 @@ export const SummaryBranch = props => {
     case 'checklist':
       return (
         <div className="summary-branch">
-          <img
-            className="branch-icon"
-            src='./checklist.png'
-          />
+          <img className="branch-icon" src="./checklist.png" />
           <p className="branch-description">{checklistText}</p>
-          <p className="branch-coverage">0%</p>
+          <p className="branch-coverage">{`${props.data || 0}%`}</p>
         </div>
       );
     case 'preIncident':
       return (
         <div className="summary-branch">
-          <img
-            className="branch-icon"
-            src='./planning.png'
-          />
+          <img className="branch-icon" src="./planning.png" />
           <p className="branch-description">{preIncidentText}</p>
-          <p className="branch-coverage">0%</p>
+          <p className="branch-coverage">{`${props.data || 0}%`}</p>
         </div>
       );
     case 'floorPlan':
       return (
         <div className="summary-branch">
-          <img
-            className="branch-icon"
-            src='./floor-plan.png'
-          />
+          <img className="branch-icon" src="./floor-plan.png" />
           <p className="branch-description">{uploadScanText}</p>
-          <p className="branch-coverage">0%</p>
+          <p className="branch-coverage">{`${props.data || 0}%`}</p>
         </div>
       );
     default:
