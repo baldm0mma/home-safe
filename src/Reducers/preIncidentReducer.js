@@ -7,13 +7,15 @@ export const defaultQuestions = [
   },
   {
     id: 2,
-    question: 'Do you have a fire hydrant within one block, or 200ft of your residence?',
+    question:
+      'Do you have a fire hydrant within one block, or 200ft of your residence?',
     answer: false,
     completed: false
   },
   {
     id: 3,
-    question: 'Do you have a pond, creek, or river within 1/4 mile of your residence?',
+    question:
+      'Do you have a pond, creek, or river within 1/4 mile of your residence?',
     answer: false,
     completed: false
   },
@@ -37,7 +39,8 @@ export const defaultQuestions = [
   },
   {
     id: 7,
-    question: 'Do you have access to your attic from the interior of your residence?',
+    question:
+      'Do you have access to your attic from the interior of your residence?',
     answer: '',
     completed: false
   },
@@ -78,7 +81,7 @@ export const preIncidentReducer = (state = defaultQuestions, action) => {
     case 'LOG_ANSWER':
       return state.map(question => {
         if (question.id === action.id) {
-          return { ...question, answer: action.answer };
+          return { ...question, answer: action.answer, completed: true };
         } else {
           return question;
         }
