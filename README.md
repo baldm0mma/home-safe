@@ -27,6 +27,10 @@ Home Safe gives homeowners an easy way to upload their pertinent safety informat
 3. In your command line, fun `npm start`
 4. Home Safe will open on a local server in your browser
 
+### Screenshots
+
+![Login Screen](./public/hs-login.jpg)
+
 
 ### License
 
