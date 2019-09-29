@@ -1,13 +1,13 @@
-import React from "react";
-import "./ChecklistItem.scss";
-import { connect } from "react-redux";
-import { bindActionCreators } from "redux";
+import React from 'react';
+import './ChecklistItem.scss';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 import {
   addProgress,
   subtractProgress,
   checkItem,
   unCheckItem
-} from "../../Actions";
+} from '../../Actions';
 
 export class ChecklistItem extends React.Component {
   state = {
@@ -22,10 +22,10 @@ export class ChecklistItem extends React.Component {
     await this.setState({ checked: !this.state.checked });
     if (this.state.checked) {
       this.props.checkItem(this.props.id);
-      this.props.addProgress(5);
+      // this.props.addProgress(2);
     } else {
       this.props.unCheckItem(this.props.id);
-      this.props.subtractProgress(5);
+      // this.props.subtractProgress(2);
     }
   };
 
