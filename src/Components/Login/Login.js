@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "./Login.scss";
 
 export class Login extends React.Component {
   state = {
@@ -9,20 +10,12 @@ export class Login extends React.Component {
 
   render() {
     return (
-      <section>
-        <form>
-          <label>
-            Username:
-            <input type="text" name="username" />
-          </label>
-          <label>
-            Password:
-            <input type="password" name="password" />
-          </label>
+      <section className="login">
+        <form className="login-form">
+          <input className="login-input" type="text" name="username" placeholder="Enter email" />
+          <input className="login-input" type="password" name="password" placeholder="Enter password" />
           <Link to="/checklist">
-            <button>
-              Login
-            </button>
+            <button className="login-button">Login</button>
           </Link>
         </form>
       </section>

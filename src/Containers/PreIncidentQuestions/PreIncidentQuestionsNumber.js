@@ -21,7 +21,7 @@ export class PreIncidentQuestionsNumber extends Component {
   render = () => {
     return (
       <article className="question-wrapper">
-        <p>{this.props.question}</p>
+        <p className="question-text">{this.props.question}</p>
         <input
           className="input-field"
           type="text"

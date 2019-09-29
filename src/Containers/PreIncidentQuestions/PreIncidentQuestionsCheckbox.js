@@ -46,7 +46,7 @@ export class PreIncidentQuestionsCheckbox extends Component {
     const { id, question, buttonText } = this.props;
     return (
       <article key={id} className="question-wrapper">
-        <p>{question}</p>
+        <p className="question-text">{question}</p>
         <div className="checkboxes-wrapper">{this.createCheckboxes()}</div>
         <button className="next-button" onClick={this.handleSubmit}>
           {buttonText}

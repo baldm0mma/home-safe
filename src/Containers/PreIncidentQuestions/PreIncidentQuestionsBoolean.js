@@ -16,7 +16,7 @@ export class PreIncidentQuestionsBoolean extends Component {
   render = () => {
     return (
       <article className="question-wrapper">
-        <p>{this.props.question}</p>
+        <p className="question-text">{this.props.question}</p>
         <div className="boolean-buttons-wrapper">
           <button
             className={`yes-button ${this.state.answer ? "green" : null}`}

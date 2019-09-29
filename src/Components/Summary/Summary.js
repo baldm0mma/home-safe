@@ -24,4 +24,4 @@ const mapStateToProps = store => ({
   progress: store.progress,
   checklist: store.checklist,
   preIncidentQuestions: store.preIncidentQuestions
-});
+}); 

@@ -26,7 +26,7 @@ export class PreIncidentQuestionsRadio extends Component {
   render = () => {
     return (
       <article className="question-wrapper">
-        <p>{this.props.question}</p>
+        <p className="question-text">{this.props.question}</p>
         <select onChange={this.handleChange} value={this.state.answer}>
           {this.displayOptions()};
         </select>
