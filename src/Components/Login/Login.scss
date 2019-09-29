@@ -12,8 +12,11 @@
 }
 
 .login-button {
-  margin-top: 40px;
+  margin-top: 20px;
   width: 25vw;
+  background-color: #2782be;
+  border: none;
+  color: white;
   &:hover {
     cursor: pointer;
     opacity: .6;
@@ -27,4 +30,20 @@
   border: solid black 2px;
   margin: 10px;
   font-size: 18px;
+}
+
+.user-button {
+  margin-top: 30px;
+  width: 25vw;
+  &:hover {
+    cursor: pointer;
+    opacity: .6;
+  }
+}
+
+.login-message {
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-align: center;
+  margin: 0;
 }

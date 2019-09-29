@@ -14,13 +14,14 @@ export class LoginScreen extends Component {
   };
   render = () => {
     return (
-      <div className='loginScreen-container'>
+      <div className={`loginScreen-container ${this.state.user === "homeowner" ? "homeowner-background" : "first-responder-background"}`}>
         <Login></Login>
+          <p className="login-message">Which one are you?</p>
         <nav className="nav-wrapper">
-          <button className="login-button" onClick={() => this.toggleUser('homeowner')}>
+          <button className="user-button" onClick={() => this.toggleUser('homeowner')}>
             Homeowner
           </button>
-          <button className="login-button" onClick={() => this.toggleUser('firstResponder')}>
+          <button className="user-button" onClick={() => this.toggleUser('firstResponder')}>
             First Responder
           </button>
         </nav>
