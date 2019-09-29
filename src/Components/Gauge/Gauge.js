@@ -11,13 +11,13 @@ export const Gauge = props => {
         value={props.progress}
         text={`${props.progress}%`}
         styles={buildStyles({
-          pathColor: '#7FFF00',
-          textColor: '#f88',
-          trailColor: '#d6d6d6',
+          pathColor: "#2781be",
+          textColor: "#2781be",
+          trailColor: "whiteg"
         })}
       />
     </div>
-  )
+  );
 }
 
 export const mapStateToProps = state => ({

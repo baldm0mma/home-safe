@@ -17,3 +17,9 @@ export const unCheckItem = id => ({
   type: 'UNCHECK_ITEM',
   id
 });
+
+export const logAnswer = (id, answer) => ({
+  type: 'LOG_ANSWER',
+  id,
+  answer
+});
