@@ -1,19 +1,66 @@
-import React from "react";
-import { connect } from "react-redux";
-import "./PreIncidentScreen.scss";
-import PreIncidentQuestionsBoolean from "../PreIncidentQuestions/PreIncidentQuestionsBoolean";
-import PreIncidentQuestionsCheckbox from "../PreIncidentQuestions/PreIncidentQuestionsCheckbox";
-import PreIncidentQuestionsNumber from "../PreIncidentQuestions/PreIncidentQuestionsNumber";
-import PreIncidentQuestionsRadio from "../PreIncidentQuestions/PreIncidentQuestionsRadio";
+import React from 'react';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import { updateProgress } from '../../Actions';
+import './PreIncidentScreen.scss';
+import PreIncidentQuestionsBoolean from '../PreIncidentQuestions/PreIncidentQuestionsBoolean';
+import PreIncidentQuestionsCheckbox from '../PreIncidentQuestions/PreIncidentQuestionsCheckbox';
+import PreIncidentQuestionsNumber from '../PreIncidentQuestions/PreIncidentQuestionsNumber';
+import PreIncidentQuestionsRadio from '../PreIncidentQuestions/PreIncidentQuestionsRadio';
 
 export class PreIncidentScreen extends React.Component {
   state = {
     currentQuestion: 0
   };
 
+  componentDidMount = () => {
+    this.updateProgressTracker();
+  };
+
+  calculateChecklistProgress = () => {
+    const { checklist } = this.props;
+    let counter = 0;
+    checklist.forEach(item => {
+      if (item.checked) {
+        counter++;
+      } else {
+        counter += 0;
+      }
+    });
+    return Math.floor((counter / checklist.length) * 100);
+  };
+
+  calculateIncidentProgress = () => {
+    const { preIncidentQuestions } = this.props;
+    let counter = 0;
+    preIncidentQuestions.forEach(item => {
+      if (item.completed) {
+        counter++;
+      } else {
+        counter += 0;
+      }
+    });
+    return Math.floor((counter / preIncidentQuestions.length) * 100);
+  };
+
+  verifyUpload = () => {
+    const { uploadCounter } = this.props;
+    return uploadCounter > 0 ? 100 : 0;
+  };
+
+  updateProgressTracker = () => {
+    const checklistProg = this.calculateChecklistProgress();
+    const incidentProg = this.calculateIncidentProgress();
+    const modelProg = this.verifyUpload();
+    const total = checklistProg + incidentProg + modelProg;
+    const progress = Math.floor((total / 300) * 100);
+    this.props.updateProgress(progress);
+  };
+
   advanceQuestion = () => {
     const nextQuestion = this.state.currentQuestion + 1;
     this.setState({ currentQuestion: nextQuestion });
+    this.updateProgressTracker();
   };
 
   displayDots = () => {
@@ -24,7 +71,7 @@ export class PreIncidentScreen extends React.Component {
           src="./blackDot.png"
           alt="green dot to track question progress"
           className={`${
-            i === this.state.currentQuestion ? "active-dot" : "dot"
+            i === this.state.currentQuestion ? 'active-dot' : 'dot'
           }`}
           key={i}
         />
@@ -66,7 +113,7 @@ export class PreIncidentScreen extends React.Component {
         {this.state.currentQuestion === 3 && (
           <PreIncidentQuestionsRadio
             id={4}
-            question='What type of roof do you have?'
+            question="What type of roof do you have?"
             options={['Flat', 'Arched', 'Pitched', 'Hip', 'Dome', 'Other']}
             advanceQuestion={this.advanceQuestion}
             buttonText="Next"
@@ -76,7 +123,7 @@ export class PreIncidentScreen extends React.Component {
           <PreIncidentQuestionsRadio
             id={5}
             question="What type of basement do you have?"
-            options={["None", "Daylight Basement", "Walkout Basement"]}
+            options={['None', 'Daylight Basement', 'Walkout Basement']}
             advanceQuestion={this.advanceQuestion}
             buttonText="Next"
           />
@@ -110,7 +157,7 @@ export class PreIncidentScreen extends React.Component {
             id={9}
             question="Do you have a fire suppression system?"
             advanceQuestion={this.advanceQuestion}
-            options={["Wet", "Dry chemical", "Foam", "Halon", "No"]}
+            options={['Wet', 'Dry chemical', 'Foam', 'Halon', 'No']}
             buttonText="Next"
           />
         )}
@@ -136,12 +183,12 @@ export class PreIncidentScreen extends React.Component {
             question="Are you storing any hazardous materials? If so, where?"
             advanceQuestion={this.advanceQuestion}
             options={[
-              "Garage",
-              "Basement",
-              "Kitchen",
-              "Bathroom",
-              "Attic",
-              "I am not storing any Hazardous Materials"
+              'Garage',
+              'Basement',
+              'Kitchen',
+              'Bathroom',
+              'Attic',
+              'I am not storing any Hazardous Materials'
             ]}
             buttonText="Finish"
           />
@@ -153,7 +200,16 @@ export class PreIncidentScreen extends React.Component {
 }
 
 export const mapStateToProps = state => ({
-  preIncidentQuestions: state.preIncidentQuestions
+  preIncidentQuestions: state.preIncidentQuestions,
+  checklist: state.checklist,
+  uploadCounter: state.uploadCounter,
+  progress: state.progress
 });
 
-export default connect(mapStateToProps)(PreIncidentScreen);
+export const mapDispatchToProps = dispatch =>
+  bindActionCreators({ updateProgress }, dispatch);
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(PreIncidentScreen);
