@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { logAnswer } from '../../Actions/index';
 import { Checkbox, FormControlLabel } from '@material-ui/core';
+import { Link } from 'react-router-dom';
 
 export class PreIncidentQuestionsCheckbox extends Component {
   state = {
@@ -45,12 +46,21 @@ export class PreIncidentQuestionsCheckbox extends Component {
   render = () => {
     const { id, question, buttonText } = this.props;
     return (
-      <article key={id} className="question-wrapper">
-        <p className="question-text">{question}</p>
-        <div className="checkboxes-wrapper">{this.createCheckboxes()}</div>
-        <button className="next-button" onClick={this.handleSubmit}>
-          {buttonText}
-        </button>
+      <article key={id}>
+        <p>{question}</p>
+        {this.createCheckboxes()}
+        {buttonText !== 'Finish' && (
+          <button onClick={this.handleSubmit}>{buttonText}</button>
+        )}
+        {buttonText === 'Finish' && (
+          <Link
+            className='next-button'
+            to='/responderPlan'
+            onClick={this.handleSubmit}
+          >
+            {buttonText}
+          </Link>
+        )}
       </article>
     );
   };
