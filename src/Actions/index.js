@@ -23,3 +23,8 @@ export const logAnswer = (id, answer) => ({
   id,
   answer
 });
+
+export const updateCounter = (count) => ({
+  type: 'UPDATE_COUNTER',
+  count
+})

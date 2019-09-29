@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ScanUploader from '../ScanUploader/ScanUploader';
+import { connect } from 'react-redux';
 import './ScanPage.scss';
 
 class ScanPage extends Component {
@@ -10,7 +11,6 @@ class ScanPage extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
-    console.log('heyo')
     this.setState({ submitted: true });
   }
 
@@ -29,4 +29,8 @@ class ScanPage extends Component {
   }
 }
 
-export default ScanPage;
+const mapDispatchToProps = dispatch => ({
+
+})
+
+export default connect(null, mapDispatchToProps)(ScanPage);
