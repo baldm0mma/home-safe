@@ -25,7 +25,18 @@ export class Summary extends Component {
     return Math.floor((counter / checklist.length) * 100);
   };
 
+  calculateIncidentProgress = () => {
+    const { preIncidentQuestions } = this.props;
+    let counter = 0;
+    preIncidentQuestions.forEach(item => {
+      if (item.completed) {
+        counter++;
+      } else {
+        counter += 0;
   }
+    });
+    return Math.floor((counter / preIncidentQuestions.length) * 100);
+  };
 
   render() {
     return (
