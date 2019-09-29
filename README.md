@@ -29,7 +29,7 @@ Home Safe gives homeowners an easy way to upload their pertinent safety informat
 
 ### Screenshots
 
-![Login Screen](./public/hs-login)
+![Login Screen](./public/hs-login.png)
 
 
 ### License
