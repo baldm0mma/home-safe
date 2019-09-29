@@ -1,22 +1,28 @@
 .scan-form {
+  align-items: center;
+  background: rgba(255, 255, 255, 0.719);
+  border-radius: 8px;
+  box-shadow: 10px 10px 40px -28px rgba(0,0,0,0.75);
   display: flex;
   flex-direction: column;
-  align-items: center;
+  padding: 40px;
+  width: 55%;
 }
 
 .house-scan-label,
 .scan-submit-button {
   align-items: center;
+  border-radius: 4px; 
   box-sizing: border-box;
   display: flex;
   background-color: #2781BE;
   border: none;
   color: white;
   font-size: 1em;
-  height: 40px;
+  height: 8vh;
   justify-content: center;
   margin: 5px;
-  width: 50%;
+  width: 90%;
 }
 
 .scan-upload-button {
@@ -26,17 +32,17 @@
 .scan-submit-button:hover,
 .house-scan-label:hover {
   background-color: white;
-  border: #2781BE solid 1px;
+  border: #2781BE solid 2px;
   color: #2781BE;
 }
 
 .selected-file-container {
   align-items: center;
-  border: black solid 1px;
+  border: black solid 2px;
   display: flex;
   height: 30px;
   margin: 0px;
-  width: 50%;
+  width: 89%;
 }
 
 .selected-file {
