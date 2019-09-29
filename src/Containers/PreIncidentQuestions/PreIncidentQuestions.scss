@@ -18,7 +18,7 @@
   animation: fadeIn .6s linear;
   border-radius: 8px;
   box-shadow: 10px 10px 40px -28px rgba(0,0,0,0.75);
-  background: white;
+  background: rgba(255, 255, 255, 0.89);
 }
 
 p {
@@ -27,8 +27,8 @@ p {
 }
 
 button {
-  height: 10vh;
-  width: 25vw;
+  height: 8vh;
+  width: 20vw;
   font-size: 1.5rem;
   font-weight: 500;
   background: white;
