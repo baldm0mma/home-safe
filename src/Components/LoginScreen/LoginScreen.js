@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Login } from '../Login/Login';
+import './LoginScreen.scss';
 
 export class LoginScreen extends Component {
   constructor() {
@@ -13,7 +14,7 @@ export class LoginScreen extends Component {
   };
   render = () => {
     return (
-      <div>
+      <div className='loginScreen-container'>
         <Login></Login>
         <nav>
           <button onClick={() => this.toggleUser('homeowner')}>

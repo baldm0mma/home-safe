@@ -19,7 +19,11 @@ export class Login extends React.Component {
             Password:
             <input type="password" name="password" />
           </label>
-          <Link to="/checklist">Login</Link>
+          <Link to="/checklist">
+            <button>
+              Login
+            </button>
+          </Link>
         </form>
       </section>
     );
