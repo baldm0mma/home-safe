@@ -5,7 +5,10 @@
   justify-content: space-around;
   height: 24vh;
   width: 95%;
-  margin: 0;
+  margin: 20px;
+  border-radius: 8px;
+  box-shadow: 10px 10px 40px -28px rgba(0, 0, 0, 0.75);
+  background: rgba(255, 255, 255, 0.719);
 }
 
 .branch-icon {
@@ -14,7 +17,7 @@
 
 .branch-description {
   font-size: 1.2rem;
-  width: 58%;
+  width: 75%;
   padding: 15px;
   font-weight: 500;
 }
