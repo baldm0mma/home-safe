@@ -2,11 +2,11 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  margin: 10px;
   &:hover {
     cursor: pointer;
     opacity: .6;
   }
+  height: 56px;
 }
 
 .checkbox {
