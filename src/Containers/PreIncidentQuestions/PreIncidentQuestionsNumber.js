@@ -20,9 +20,10 @@ export class PreIncidentQuestionsNumber extends Component {
 
   render = () => {
     return (
-      <article>
+      <article className="question-wrapper">
         <p>{this.props.question}</p>
         <input
+          className="input-field"
           type="text"
           value={this.state.answer}
           onChange={this.handleChange}
