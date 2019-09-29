@@ -1,28 +1,38 @@
 import React from 'react';
 import './SummaryBranch.scss';
+import { checklistText, preIncidentText } from './Descriptions';
 
 export const SummaryBranch = props => {
   switch (props.category) {
     case 'checklist':
       return (
         <div className="summary-branch">
-          <img src={require('../../assets/_checklistIcon.png')} />
-          <p className="branch-description">Example Text Here</p>
+          <img
+            className="branch-icon"
+            src={require('../../assets/_checklistIcon.png')}
+          />
+          <p className="branch-description">{checklistText}</p>
           <p className="branch-coverage">0%</p>
         </div>
       );
     case 'preIncident':
       return (
         <div className="summary-branch">
-          <img src={require('../../assets/_preIncident.png')} />
-          <p className="branch-description">Example Text Here</p>
+          <img
+            className="branch-icon"
+            src={require('../../assets/_preIncident.png')}
+          />
+          <p className="branch-description">{preIncidentText}</p>
           <p className="branch-coverage">0%</p>
         </div>
       );
     case 'floorPlan':
       return (
         <div className="summary-branch">
-          <img src={require('../../assets/_floorplanIcon.jpg')} />
+          <img
+            className="branch-icon"
+            src={require('../../assets/_floorplanIcon.jpg')}
+          />
           <p className="branch-description">Example Text Here</p>
           <p className="branch-coverage">0%</p>
         </div>
@@ -30,7 +40,7 @@ export const SummaryBranch = props => {
     default:
       return (
         <div className="summary-branch">
-          <img src="" />
+          <img className="branch-icon" src="" />
           <p className="branch-description">Example Text Here</p>
           <p className="branch-coverage">0%</p>
         </div>
