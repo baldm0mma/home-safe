@@ -4,7 +4,7 @@ import { Header } from "../../Components/Header/Header";
 import { LoginScreen } from "../../Components/LoginScreen/LoginScreen";
 import ChecklistScreen from "../ChecklistScreen/ChecklistScreen";
 import PreIncidentScreen from "../PreIncidentScreen/PreIncidentScreen";
-import "./App.css";
+import "./App.scss";
 
 export const App = () => {
   return (
