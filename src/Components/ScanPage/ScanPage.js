@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ScanUploader from '../ScanUploader/ScanUploader';
+import { updateCounter } from '../../Actions';
 import { connect } from 'react-redux';
 import './ScanPage.scss';
 
@@ -12,6 +13,7 @@ class ScanPage extends Component {
   handleSubmit = (e) => {
     e.preventDefault();
     this.setState({ submitted: true });
+    this.props.updateCounter(1);
   }
 
   render() {
@@ -30,7 +32,7 @@ class ScanPage extends Component {
 }
 
 const mapDispatchToProps = dispatch => ({
-
+  updateCounter: count => dispatch(updateCounter(count))
 })
 
 export default connect(null, mapDispatchToProps)(ScanPage);
