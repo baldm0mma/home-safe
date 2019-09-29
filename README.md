@@ -1,68 +1,27 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Home Safe
 
-## Available Scripts
+### Team
+[Jev Forsberg](https://github.com/baldm0mma)
+[Vinton Te'o](https://github.com/vjt960)
+[Antonio Fry](https://github.com/antoniofry)
+[Steve Rumizen](https://github.com/rumizen)
 
-In the project directory, you can run:
+### About
 
-### `npm start`
+Home Safe is a platform designed to encourage homeowners to take their safety into their own hands.
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+First responders have to deal with extreme conditions that make navigating an emergency situation difficult. When they have information like floor plans, locations of hazardous materials, roof type, and family member names, they can do their jobs more efficiently. This is where Home Safe comes in.
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+Home Safe gives homeowners an easy way to upload their pertinent safety information to be stored and displayed in a useful manner. It ecnourages users to complete a safety checklist, upload floor plans, and create a pre-incident plan to be printed and saved for display in the home. All of these features culminate to help homeowners get insurance breaks and offer first responders an amazing set of data that will help them do their job.
 
-### `npm test`
+### Installation
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Clone this repo down to your local machine
+2. In your command line, run `npm install`
+3. In your command line, fun `npm start`
+4. Home Safe will open on a local server in your browser
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### License
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+The MIT license (MIT)
