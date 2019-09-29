@@ -15,10 +15,8 @@ header {
   background: rgba(0, 0, 0, 0.638);
 }
 
-
-
 h1 {
-  margin-left: 15px;
+  margin: 0 0 0 15px;
   font-size: 3.8rem;
   font-family: 'Pavanam', sans-serif;
 }
@@ -34,4 +32,13 @@ h1 {
   color: white;
   font-weight: 700;
   font-style: italic;
+}
+
+.title-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.tagline {
+  margin: 0 0 0 15px;
 }
