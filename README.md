@@ -32,6 +32,24 @@ Home Safe gives homeowners an easy way to upload their pertinent safety informat
 ![Login Screen](./public/hs-login.png)
 
 
+![Summary Screen](./public/hs-summary.png)
+
+
+![Checklist Screen](./public/hs-checklist.png)
+
+
+![Question Screen](./public/hs-question.png)
+
+
+![Upload Screen](./public/hs-upload.png)
+
+
+![Login Screen](./public/hs-login.png)
+
+
+![Plan Screen](./public/hs-plan.png)
+
+
 ### License
 
 The MIT license (MIT)
