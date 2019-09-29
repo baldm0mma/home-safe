@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import { updateProgress } from '../../Actions';
 import { SummaryBranch } from '../../Containers/SummaryBranch/SummaryBranch';
 import './Summary.scss';
 
@@ -9,7 +11,7 @@ export class Summary extends Component {
   }
 
   componentDidMount = () => {
-    console.log(this.props);
+    this.updateProgressTracker();
   };
 
   calculateChecklistProgress = () => {
@@ -43,6 +45,15 @@ export class Summary extends Component {
     return uploadCounter > 0 ? 100 : 0;
   };
 
+  updateProgressTracker = () => {
+    const checklistProg = this.calculateChecklistProgress();
+    const incidentProg = this.calculateIncidentProgress();
+    const modelProg = this.verifyUpload();
+    const total = checklistProg + incidentProg + modelProg;
+    const progress = Math.floor((total / 300) * 100);
+    this.props.updateProgress(progress);
+  };
+
   render() {
     return (
       <div className="summary-board">
@@ -69,4 +80,10 @@ const mapStateToProps = store => ({
   uploadCounter: store.uploadCounter
 });
 
-export default connect(mapStateToProps)(Summary);
+export const mapDispatchToProps = dispatch =>
+  bindActionCreators({ updateProgress }, dispatch);
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Summary);
