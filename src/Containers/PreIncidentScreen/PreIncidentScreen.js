@@ -22,7 +22,7 @@ export class PreIncidentScreen extends React.Component {
       if (i === this.state.currentQuestion) {
         dots.push(
           <img
-            src='./green-dot.png'
+            src='./blackDot.png'
             alt='green dot to track question progress'
             className='active-dot'
             key={i}
@@ -31,7 +31,7 @@ export class PreIncidentScreen extends React.Component {
       } else {
         dots.push(
           <img
-            src='./dot.png'
+            src='./blackDot.png'
             alt='dot to track question progress'
             className='dot'
             key={i}
