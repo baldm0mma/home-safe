@@ -1,6 +1,6 @@
 .plan-container {
   border-radius: 8px;
-  box-shadow: 10px 10px 40px -28px rgba(0,0,0,0.75);
+  box-shadow: 10px 10px 40px -28px rgba(0, 0, 0, 0.75);
   background: rgba(255, 255, 255, 0.719);
   margin-top: 23vh;
   height: 70vh;
@@ -25,7 +25,6 @@
 
 .people-pets {
   display: flex;
-  align-content: space-between;
   width: 100%;
   justify-content: space-evenly;
 }
@@ -48,4 +47,23 @@
 
 .buildingDetails-container {
   text-align: center;
+}
+
+.people {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pets {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
 }

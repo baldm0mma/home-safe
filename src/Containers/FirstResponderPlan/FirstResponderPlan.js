@@ -50,11 +50,11 @@ export const FirstResponderPlan = ({ details }) => {
       <div className='resident-container'>
         <h3>Resident Details</h3>
         <div className='people-pets'>
-          <div>
+          <div className='people'>
             <h5>People</h5>
             <ul>{displayPeople()}</ul>
           </div>
-          <div>
+          <div className='pets'>
             <h5>Pets</h5>
             <ul>{displayPets()}</ul>
           </div>
