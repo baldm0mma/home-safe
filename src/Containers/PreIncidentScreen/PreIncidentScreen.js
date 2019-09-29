@@ -114,7 +114,7 @@ export class PreIncidentScreen extends React.Component {
           <PreIncidentQuestionsRadio
             id={4}
             question="What type of roof do you have?"
-            options={['Flat', 'Arched', 'Pitched', 'Hip', 'Dome', 'Other']}
+            options={['Unsure','Flat', 'Arched', 'Pitched', 'Hip', 'Dome', 'Other']}
             advanceQuestion={this.advanceQuestion}
             buttonText="Next"
           />
