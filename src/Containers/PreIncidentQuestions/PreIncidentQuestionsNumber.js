@@ -22,8 +22,14 @@ export class PreIncidentQuestionsNumber extends Component {
     return (
       <article>
         <p>{this.props.question}</p>
-        <input type="text" value={this.state.answer} onChange={this.handleChange} />
-        <button onClick={this.handleSubmit}>{this.props.buttonText}</button>
+        <input
+          type="text"
+          value={this.state.answer}
+          onChange={this.handleChange}
+        />
+        <button className="next-button" onClick={this.handleSubmit}>
+          {this.props.buttonText}
+        </button>
       </article>
     );
   };
