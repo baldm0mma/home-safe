@@ -14,7 +14,7 @@ export class Login extends React.Component {
         <form className="login-form">
           <input className="login-input" type="text" name="username" placeholder="Enter email" />
           <input className="login-input" type="password" name="password" placeholder="Enter password" />
-          <Link to="/checklist">
+          <Link to="/summary">
             <button className="login-button">Login</button>
           </Link>
         </form>
