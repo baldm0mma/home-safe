@@ -27,6 +27,7 @@ export class ChecklistItem extends React.Component {
       this.props.unCheckItem(this.props.id);
       // this.props.subtractProgress(2);
     }
+    this.props.update();
   };
 
   render() {
