@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { logAnswer } from '../../Actions/index';
+import React, { Component } from "react";
+import { connect } from "react-redux";
+import { logAnswer } from "../../Actions/index";
 
 export class PreIncidentQuestionsBoolean extends Component {
   state = {
@@ -15,11 +15,25 @@ export class PreIncidentQuestionsBoolean extends Component {
 
   render = () => {
     return (
-      <article>
+      <article className="question-wrapper">
         <p>{this.props.question}</p>
-        <button onClick={() => this.setState({ answer: true })}>Yes</button>
-        <button onClick={() => this.setState({ answer: false })}>No</button>
-        <button onClick={this.handleSubmit}>{this.props.buttonText}</button>
+        <div className="boolean-buttons-wrapper">
+          <button
+            className={`yes-button ${this.state.answer ? "green" : null}`}
+            onClick={() => this.setState({ answer: true })}
+          >
+            Yes
+          </button>
+          <button
+            className={`no-button ${this.state.answer === false ? "red" : null}`}
+            onClick={() => this.setState({ answer: false })}
+          >
+            No
+          </button>
+        </div>
+        <button className="next-button" onClick={this.handleSubmit}>
+          {this.props.buttonText}
+        </button>
       </article>
     );
   };
