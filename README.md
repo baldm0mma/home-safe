@@ -27,6 +27,8 @@ Home Safe gives homeowners an easy way to upload their pertinent safety informat
 3. In your command line, fun `npm start`
 4. Home Safe will open on a local server in your browser
 
+Or visit the production site [here](https://techtoprotect-home-safe.herokuapp.com/)!
+
 ### Screenshots
 
 ![Login Screen](./public/hs-login.png)
