@@ -1,3 +1,5 @@
 export const checklistText = `A fire safety checklist assists employers and homeowners to conduct fire risk assessments, and to maintain fire safety standards on their premises. These checklists ensure that every aspect of fire safety is monitored, assessed and corrected if required.`;
 
 export const preIncidentText = `Having situational awareness of the building's critical infrastructure allows Firefighters and other first responders to perform more efficiently and mitigate the risk of injury. Pre-planning — also known as pre-incident planning or pre-fire planning — is an important and necessary aspect of fire safety.`;
+
+export const uploadScanText = `Uploading a 3D scan of your building will assist emergency responders have familiarity with the environment they are working in when in crisis situations. Unlike 2D schematics of the building, emergency responders will work more efficently being able to recognize where furniture lies as well as being able to point out visual cues quicker`;
