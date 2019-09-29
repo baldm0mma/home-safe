@@ -2,8 +2,14 @@
 
 ### Team
 [Jev Forsberg](https://github.com/baldm0mma)
+
+
 [Vinton Te'o](https://github.com/vjt960)
+
+
 [Antonio Fry](https://github.com/antoniofry)
+
+
 [Steve Rumizen](https://github.com/rumizen)
 
 ### About
