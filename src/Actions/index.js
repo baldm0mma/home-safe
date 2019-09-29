@@ -8,6 +8,11 @@ export const subtractProgress = percentage => ({
   percentage
 });
 
+export const updateProgress = percentage => ({
+  type: 'UPDATE_PROGRESS',
+  percentage
+});
+
 export const checkItem = id => ({
   type: 'CHECK_ITEM',
   id
@@ -24,7 +29,7 @@ export const logAnswer = (id, answer) => ({
   answer
 });
 
-export const updateCounter = (count) => ({
+export const updateCounter = count => ({
   type: 'UPDATE_COUNTER',
   count
-})
+});
