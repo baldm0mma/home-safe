@@ -8,7 +8,7 @@
 }
 
 .question-wrapper {
-  margin-top: 20vh;
+  margin-top: 23vh;
   height: 55vh;
   width: 90vw;
   display: flex;
@@ -18,17 +18,17 @@
   animation: fadeIn .6s linear;
   border-radius: 8px;
   box-shadow: 10px 10px 40px -28px rgba(0,0,0,0.75);
-  background: white;
+  background: rgba(255, 255, 255, 0.719);
 }
 
 p {
   font-size: 2.2rem;
-  font-weight: 400;
+  font-weight: 700;
 }
 
 button {
-  height: 10vh;
-  width: 25vw;
+  height: 8vh;
+  width: 20vw;
   font-size: 1.5rem;
   font-weight: 500;
   background: white;
@@ -43,7 +43,7 @@ button {
 
 .yes-button {
   outline-color: #2CCC71;
-  opacity: .8;
+  // opacity: .8;
   box-shadow: 10px 10px 40px -28px rgba(0,0,0,0.75);
   &:hover {
     border-color: #2CCC71;
@@ -53,7 +53,7 @@ button {
 
 .no-button {
   outline-color: #cc3c2c;
-  opacity: .8;
+  // opacity: .8;
   box-shadow: 10px 10px 40px -28px rgba(0,0,0,0.75);
   &:hover {
     border-color: #cc3c2c;
@@ -77,6 +77,6 @@ button {
   color: white;
   margin-top: 20px;
   margin-bottom: 50px;
-  opacity: .8;
+  // opacity: .8;
   box-shadow: 10px 10px 40px -28px rgba(0,0,0,0.75);
 }

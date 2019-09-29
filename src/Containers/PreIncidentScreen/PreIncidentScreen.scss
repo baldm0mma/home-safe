@@ -5,6 +5,8 @@ main {
   justify-content: space-between;
   height: 100vh;
   background: rgb(241, 241, 241);
+  background-image: url("../../assets/yard-home.jpg");
+  background-position: center;
 }
 
 .dots-wrapper {
@@ -15,11 +17,13 @@ main {
 }
 
 .active-dot {
-  height: 30px;
+  height: 40px;
   margin: 10px;
+  opacity: .6;
 }
 
 .dot {
   height: 15px;
   margin: 10px;
+  opacity: .6;
 }
