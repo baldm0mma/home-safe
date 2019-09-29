@@ -46,19 +46,19 @@ export class PreIncidentQuestionsCheckbox extends Component {
   render = () => {
     const { id, question, buttonText } = this.props;
     return (
-      <article key={id}>
-        <p>{question}</p>
-        {this.createCheckboxes()}
-        {buttonText !== 'Finish' && (
-          <button onClick={this.handleSubmit}>{buttonText}</button>
-        )}
-        {buttonText === 'Finish' && (
-          <Link
-            className='next-button'
-            to='/responderPlan'
-            onClick={this.handleSubmit}
-          >
+      <article key={id} className="question-wrapper">
+        <p className="question-text">{question}</p>
+        <div className="checkbox-wrapper">{this.createCheckboxes()}</div>
+        {buttonText !== "Finish" && (
+          <button className="next-button" onClick={this.handleSubmit}>
             {buttonText}
+          </button>
+        )}
+        {buttonText === "Finish" && (
+          <Link to="/responderPlan" onClick={this.handleSubmit}>
+            <button className="next-button" onClick={this.handleSubmit}>
+              {buttonText}
+            </button>
           </Link>
         )}
       </article>
