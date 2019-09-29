@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { logAnswer } from '../../Actions/index';
-import { Checkbox } from '@material-ui/core';
+import { Checkbox, FormControlLabel } from '@material-ui/core';
 
 export class PreIncidentQuestionsCheckbox extends Component {
   state = {
-    answer: null
+    answer: []
   };
 
   handleSubmit = () => {
@@ -14,15 +14,41 @@ export class PreIncidentQuestionsCheckbox extends Component {
     advanceQuestion();
   };
 
-  render = () => {
-    return (
-      <article>
-        <p>{this.props.question}</p>
-        <Checkbox
-          value='checkedA'
-          inputProps={{ 'aria-label': 'Checkbox A' }}
+  handleChange = val => {
+    if (this.state.answer.includes(val)) {
+      const newAnswers = this.state.answer.filter(el => el !== val);
+      this.setState({ answer: newAnswers });
+    } else {
+      this.setState({ answer: [...this.state.answer, val] });
+    }
+  };
+
+  createCheckboxes = () => {
+    return this.props.options.map(el => {
+      return (
+        <FormControlLabel
+          label={el}
+          control={
+            <Checkbox
+              value={el}
+              style={{
+                color: '#00e676'
+              }}
+            />
+          }
+          onChange={() => this.handleChange(el)}
         />
-        <button onClick={this.handleSubmit}>{this.props.buttonText}</button>
+      );
+    });
+  };
+
+  render = () => {
+    const { id, question, buttonText } = this.props;
+    return (
+      <article key={id}>
+        <p>{question}</p>
+        {this.createCheckboxes()}
+        <button onClick={this.handleSubmit}>{buttonText}</button>
       </article>
     );
   };
