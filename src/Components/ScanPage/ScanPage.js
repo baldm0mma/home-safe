@@ -19,8 +19,8 @@ class ScanPage extends Component {
       <section className="scan-page-section">
         {this.state.submitted === false && <ScanUploader handleSubmit={this.handleSubmit}/>}
         {this.state.submitted === true && 
-          <div>
-            <img src="" alt="green check mark"/>
+          <div className="uploaded-notification">
+            <img src={require('../../assets/checkmark.png')} alt="green check mark"/>
             <p>Scan has been uploaded</p>
           </div>
         }
