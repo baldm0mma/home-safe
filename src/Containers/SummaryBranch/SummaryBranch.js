@@ -1,6 +1,6 @@
 import React from 'react';
 import './SummaryBranch.scss';
-import { checklistText, preIncidentText } from './Descriptions';
+import { checklistText, preIncidentText, uploadScanText } from './Descriptions';
 
 export const SummaryBranch = props => {
   switch (props.category) {
@@ -33,7 +33,7 @@ export const SummaryBranch = props => {
             className="branch-icon"
             src={require('../../assets/_floorplanIcon.jpg')}
           />
-          <p className="branch-description">Example Text Here</p>
+          <p className="branch-description">{uploadScanText}</p>
           <p className="branch-coverage">0%</p>
         </div>
       );
