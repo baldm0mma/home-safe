@@ -15,7 +15,7 @@ Home Safe gives homeowners an easy way to upload their pertinent safety informat
 3. In your command line, fun `npm start`
 4. Home Safe will open on port 3000 on a local server in your browser
 
-Or visit the production site [here](https://techtoprotect-home-safe.herokuapp.com/)!
+Or visit the production site [here](https://ttp-home-safe.herokuapp.com/)!
 
 ## Project Successes
 
