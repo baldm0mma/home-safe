@@ -58,8 +58,6 @@ We used Trello for our project management needs. It was a great way to track our
 
 ![Upload Screen](./public/hs-upload.png)
 
-![Login Screen](./public/hs-login.png)
-
 ![Plan Screen](./public/hs-plan.png)
 
 ### Team
